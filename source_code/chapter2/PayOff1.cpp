@@ -1,4 +1,4 @@
-#include <PayOff1.h>
+#include "PayOff1.h"
 #include <algorithm>
 
 PayOff::PayOff(double Strike_, OptionType TheOptionsType_)
