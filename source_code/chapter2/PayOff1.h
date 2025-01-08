@@ -10,7 +10,7 @@ public:
 
 private:
     double Strike;
-    OptionType TheOptionType;
+    OptionType TheOptionsType;
 };
 
 #endif
