@@ -2,7 +2,7 @@
 #define SIMPLEMC_H
 #include "PayOff1.h"
 
-double SimpleMonterCarlo2(const PayOff& thePayOff,
+double SimpleMonteCarlo2(const PayOff& thePayOff,
                           double Epiry,
                           double Vol,
                           double r,
