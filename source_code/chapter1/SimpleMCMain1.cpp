@@ -29,3 +29,13 @@ double SimpleMonteCarlo(double Expiry,
     mean += std::exp(-r * Expiry);
     return mean;
 }
+
+int main() {
+    double Expiry;
+    double Strike;
+    double Spot;
+    double Vol;
+    double r;
+
+    return 0;
+}
