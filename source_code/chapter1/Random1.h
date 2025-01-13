@@ -3,4 +3,5 @@
 
 double GetOneGaussianBySummation();
 double GetOneGaussianByBoxMuller();
+
 #endif
