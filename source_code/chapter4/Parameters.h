@@ -1,4 +1,4 @@
-#ifdef PARAMETERS_H
+#ifndef PARAMETERS_H
 #define PARAMETERS_H
 
 class ParametersInner
@@ -27,27 +27,27 @@ public:
     virtual ~Parameters();
 
     inline double Integral(double time1,
-                           double time2) const=0;
+                           double time2) const;
     inline double IntegralSquare(double time1,
-                                 double time2) const=0;
+                                 double time2) const;
 
     double Mean(double time1, double time2) const;
     double RootMeanSquare(double time1, double time2) const;
 
 private:
-    ParamtersInner* InnterObjectPtr;
+    ParametersInner* InnerObjectPtr;
 };
 
-inline double::Parameters::Intergral(double time1,
-                                     double time2)
+inline double Parameters::Integral(double time1,
+                                   double time2) const
 {
-    return InnterObjectPtr->Integral(time1, time2);
+    return InnerObjectPtr->Integral(time1, time2);
 }
 
-inline double Parameters::IngrealSquare(double time1,
-                                        double time2)
+inline double Parameters::IntegralSquare(double time1,
+                                        double time2) const
 {
-    retrun InnerObjectPtr->IntegralSquare(time1, time2);
+    return InnerObjectPtr->IntegralSquare(time1, time2);
 }
 
 class ParametersConstant : public ParametersInner
@@ -56,7 +56,7 @@ public:
     ParametersConstant(double Constant);
 
     virtual ParametersInner* clone() const;
-    virtual double Integral(double time1, dobule time2);
+    virtual double Integral(double time1, double time2);
     virtual double IntegralSquare(double time1,
                                   double time2) const;
 
