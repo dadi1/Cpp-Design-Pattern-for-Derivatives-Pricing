@@ -14,12 +14,25 @@ private:
 
 };
 
+class PayOffCall : public PayOff
+{
+public:
+    PayOffCall(double Strike_);
+
+    virtual double operator() (double Spot) const;
+    virtual ~PayOffCall(){}
+    virtual PayOff* clone() const;
+
+private:
+    double Strike;
+};
+
 class PayOffPut : public PayOff
 {
 public:
     PayOffPut(double Strike_);
 
-    virtual double operator() (double Spot) const=0;
+    virtual double operator() (double Spot) const;
     virtual ~PayOffPut(){}
     virtual PayOff* clone() const;
 
