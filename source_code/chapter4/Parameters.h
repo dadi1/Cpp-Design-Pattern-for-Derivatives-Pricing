@@ -55,14 +55,14 @@ class ParametersConstant : public ParametersInner
 public: 
     ParametersConstant(double Constant);
 
-    virtual ParametersInner* clone() const;
+    virtual ParametersInner* clone() const override;
     virtual double Integral(double time1, double time2);
     virtual double IntegralSquare(double time1,
                                   double time2) const;
 
 private:
     double Constant;
-    double ConstantSqure;
+    double ConstantSquare;
 };
 
 #endif
