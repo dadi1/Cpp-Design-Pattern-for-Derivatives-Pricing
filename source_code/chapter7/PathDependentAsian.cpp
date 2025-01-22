@@ -33,5 +33,11 @@ long PathDependentAsian::CashFlows(const MJArray& SpotValues,
 
     GeneratedFlows[0].Amount = ThePayOff(mean);
 
-    return 1UL
+    return 1UL;
 }
+
+PathDependent* PathDependentAsian::clone() const
+{
+    return new PathDependentAsian(*this);
+}
+
