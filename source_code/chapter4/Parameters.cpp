@@ -44,7 +44,7 @@ ParametersConstant::ParametersConstant(double constant)
     ConstantSquare = Constant * Constant;
 }
 
-ParametersInner* ParametersConstant::clone() const override 
+ParametersInner* ParametersConstant::clone() const  
 {
     return new ParametersConstant(*this);
 }

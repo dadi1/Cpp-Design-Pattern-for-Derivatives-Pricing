@@ -72,7 +72,7 @@ double SimpleBinomialTree::GetThePrice(const TreeProduct&
         double ThisTime = index * Time/Steps;
 
         for (long j = -static_cast<long>(index), k = 0;
-        j <= static_cast<lng>(index); j += 2, k++)
+        j <= static_cast<long>(index); j += 2, k++)
         {
             double Spot = TheTree[index][k].first;
 

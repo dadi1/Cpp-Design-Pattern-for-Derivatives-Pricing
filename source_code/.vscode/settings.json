@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "algorithm": "cpp",
+        "stdexcept": "cpp",
+        "random": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
